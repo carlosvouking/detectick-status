@@ -1,36 +1,95 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Upptime Configuration for Detectick
+# Copy this file to your upptime repository root
+
+owner: carlosvouking # Change this to your GitHub username
+repo: detectick-status # Change this to your status repo name
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: Detectick Platform
+    url: https://detectick.com
+
+  - name: Detectick API
+    url: https://detectick-backend.onrender.com/api/auth/health
+    expectedStatusCodes:
+      - 200
+      - 401 # Health endpoint might return 401 if auth is required
+
+  - name: Bitstamp Exchange
+    url: https://www.bitstamp.net/api/v2/trading-pairs-info/
+    expectedStatusCodes:
+      - 200
+
+  - name: Bitvavo Exchange
+    url: https://api.bitvavo.com/v2/time
+    expectedStatusCodes:
+      - 200
+
+  - name: Coinbase Exchange
+    url: https://api.coinbase.com/v2/time
+    expectedStatusCodes:
+      - 200
+
+  - name: Kraken Exchange
+    url: https://api.kraken.com/0/public/SystemStatus
+    expectedStatusCodes:
+      - 200
+
+  - name: KuCoin Exchange
+    url: https://api.kucoin.com/api/v1/timestamp
+    expectedStatusCodes:
+      - 200
+
+  - name: OKX Exchange
+    url: https://www.okx.com/api/v5/public/time
+    expectedStatusCodes:
+      - 200
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
-  navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+  # Custom domain setup
+  cname: status.detectick.com
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+  # Branding
+  name: Detectick Status
+  introTitle: "**Detectick** System Status"
+  introMessage: Real-time status of Detectick platform and connected exchanges
+
+  # Navbar links
+  navbar:
+    - title: Dashboard
+      href: https://detectick.com/dashboard
+    - title: Main Site
+      href: https://detectick.com
+    - title: Support
+      href: mailto:support@detectick.com
+
+  # Theme
+  theme: dark
+
+  # Favicon
+  favicon: https://detectick.com/favicon.ico
+
+  # Logo (optional - add your logo URL)
+  # logoUrl: https://detectick.com/logo.png
+
+# Monitoring schedule (every 5 minutes)
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  responseTime: "0 */6 * * *"
+  graphs: "0 0 * * *"
+  staticSite: "0 1 * * *"
+
+# Commit messages
+commitMessages:
+  readmeContent: ":pencil: Update summary in README [skip ci]"
+  summaryJson: ":card_file_box: Update status summary [skip ci]"
+  statusChange: "$EMOJI $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms) [skip ci]"
+  graphsUpdate: ":bento: Update graphs [skip ci]"
+
+# Assignees for issues (optional)
+# assignees:
+#   - YOUR_GITHUB_USERNAME
+
+# Notifications (optional - for when services go down)
+# notifications:
+#   - type: slack
+#     webhook-url: $SECRET_SLACK_WEBHOOK_URL
