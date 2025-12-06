@@ -1,7 +1,7 @@
-url: https://detectick-backend.onrender.com/api/auth/health
-status: down
-code: 404
-responseTime: 438
-lastUpdated: 2025-12-05T23:20:35.936Z
+url: https://detectick-backend.onrender.com/
+status: up
+code: 200
+responseTime: 264
+lastUpdated: 2025-12-06T02:02:57.075Z
 startTime: 2025-12-05T23:20:35.232Z
 generator: Upptime <https://github.com/upptime/upptime>
