@@ -9,10 +9,9 @@ sites:
     url: https://detectick.com
 
   - name: Detectick API
-    url: https://detectick-backend.onrender.com/api/auth/health
+    url: https://detectick-backend.onrender.com/
     expectedStatusCodes:
       - 200
-      - 401 # Health endpoint might return 401 if auth is required
 
   - name: Bitstamp Exchange
     url: https://www.bitstamp.net/api/v2/trading-pairs-info/
