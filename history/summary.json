@@ -19,22 +19,23 @@
   },
   {
     "name": "Detectick API",
-    "url": "https://detectick-backend.onrender.com/api/auth/health",
+    "url": "https://detectick-backend.onrender.com/",
     "icon": "https://icons.duckduckgo.com/ip3/detectick-backend.onrender.com.ico",
     "slug": "detectick-api",
     "status": "down",
-    "uptime": "8.30%",
-    "uptimeDay": "8.30%",
-    "uptimeWeek": "8.30%",
-    "uptimeMonth": "8.30%",
-    "uptimeYear": "8.30%",
+    "uptime": "53.16%",
+    "uptimeDay": "53.16%",
+    "uptimeWeek": "53.16%",
+    "uptimeMonth": "53.16%",
+    "uptimeYear": "53.16%",
     "time": 438,
     "timeDay": 438,
     "timeWeek": 438,
     "timeMonth": 438,
     "timeYear": 438,
     "dailyMinutesDown": {
-      "2025-12-05": 0
+      "2025-12-06": 33,
+      "2025-12-05": 39
     }
   },
   {
