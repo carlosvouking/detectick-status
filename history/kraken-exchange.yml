@@ -1,7 +1,7 @@
 url: https://api.kraken.com/0/public/SystemStatus
 status: up
 code: 200
-responseTime: 337
-lastUpdated: 2025-12-10T23:19:46.444Z
+responseTime: 283
+lastUpdated: 2025-12-11T23:21:38.613Z
 startTime: 2025-12-05T23:20:39.023Z
 generator: Upptime <https://github.com/upptime/upptime>
